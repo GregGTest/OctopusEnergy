@@ -68,6 +68,7 @@ body {
 		}
 
 		.priceContain {
+			align-items: center;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -75,7 +76,6 @@ body {
 			padding-top: 13px;
 
 			.price {
-				align-items: center;
 				display: flex;
 				font-weight: bold;
 
@@ -84,9 +84,8 @@ body {
 				}
 
 				.pence {
-					align-self: baseline;
 					font-size: 20px;
-					line-height: 40px;
+					line-height: 34px;
 				}
 			}
 
