@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const Product = ({product}) => {
-    const [quantity, setQuantity] = useState(1);
-    const [basket, setBasket] = useState({items:[]});
+    const [quantity, setQuantity] = React.useState(1);
+    const [basket, setBasket] = React.useState({items:[]});
 
     const priceInPounds = (product.price/100).toFixed(2);
     const splitPrice = priceInPounds.split('.');
     const pounds = splitPrice[0];
     const pence = splitPrice[1];
-    
+
     return(
         <div className='product'>
             <div className='imageContain'>
@@ -31,7 +31,7 @@ const Product = ({product}) => {
                         <button onClick={()=>setQuantity(quantity+1)}>+</button>
                     </div>
                 </div>
-                <button className='addToCart'>Add to cart</button>
+                <button className='addToCart' onClick={()=>setBasket({...basket, items: [{id: product.id, quantity: quantity}] })}>Add to cart</button>
             </div>
             <main className='description'>
                 <h2>Description</h2>

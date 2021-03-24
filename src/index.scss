@@ -108,12 +108,16 @@ body {
 						border: 0;
 						border-radius: 6px;
 						color: white;
+						cursor: pointer;
 						font-size: 32px;
 						margin-bottom: 19px;
+						margin-left: 10px;
 						width: 35px;
 
 						&:first-of-type {
 							background-color: $slightly-darker-blue;
+							margin-left: 0;
+							margin-right: 10px;
 						}
 					}
 				}
@@ -125,6 +129,7 @@ body {
 				border-radius: 6px;
 				background: linear-gradient(0deg, $dark-pink 0%, $light-pink 50%);
 				color: white;
+				cursor: pointer;
 				flex: 1 1 100%;
 				font-size: 24px;
 				font-weight: bold;
@@ -185,6 +190,14 @@ body {
 			.specifications{
 				background: $blue;
 				width: 100%;
+
+				table{
+					tr {
+						td{
+							border-color: $dark-blue;
+						}
+					}
+				}
 			}
 		}
 
